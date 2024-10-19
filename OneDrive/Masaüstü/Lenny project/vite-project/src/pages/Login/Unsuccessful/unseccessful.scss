@@ -1,0 +1,96 @@
+@import "../../../assets/styles/variables.scss";
+
+.unsuccessful-container {
+  width: 450px;
+  border: 1px solid $borderGrey;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  .unsuccessIcon {
+    .notDoneIcon {
+      width: 120px;
+      height: 120px;
+      font-weight: 500;
+      background-color: $borderGrey;
+      padding: 20px;
+      border-radius: 100%;
+      color: red;
+    }
+  }
+  .unsuccessRes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      color: $iconGrey;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .unsuccessButton {
+      cursor: pointer;
+      border: 1px solid $darkGreen;
+      background-color: $darkGreen;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      height: 48px;
+    }
+    .unsuccessButtonForUp {
+      cursor: pointer;
+      border: 1px solid $darkGreen;
+      background-color: white;
+      border-radius: 8px;
+      color: $darkGreen;
+      font-size: 18px;
+      font-weight: 500;
+      height: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .unsuccessful-container {
+    width: 330px;
+    padding: 20px;
+    .unsuccessIcon {
+        .notDoneIcon {
+          width: 90px;
+          height: 90px;
+          font-weight: 500;
+          background-color: $borderGrey;
+          padding: 20px;
+          border-radius: 100%;
+          color: red;
+        }
+      }
+    .unsuccessRes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        color: $iconGrey;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .unsuccessButton {
+        font-size: 16px;
+      }
+      .unsuccessButtonForUp {
+        font-size: 16px;
+      }
+    }
+  }
+}

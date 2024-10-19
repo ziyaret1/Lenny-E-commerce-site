@@ -1,0 +1,69 @@
+@import "../../../assets/styles/variables.scss";
+
+.relevantProducts-container {
+  width: 76%;
+  padding: 2% 4% 3% 1%;
+  .relevantProductList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-decoration: none;
+  }
+  .relevantProductPagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root{
+    border-radius: 8px;
+    padding: 22px;   
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    color: $iconGrey;
+    }
+    .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon{
+      color: $lightGreen;
+    }
+    .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+      background-color: white;
+      color: $lightGreen;
+  }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .relevantProducts-container {
+    width: 100%;
+    padding: 2% 5%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    .relevantProductList {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      text-decoration: none;
+    }
+    .relevantProductPagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+      .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root{
+      border-radius: 8px;
+      padding: 22px;   
+      font-family: "Clash Grotesk", sans-serif;
+      font-weight: 500;
+      color: $iconGrey;
+      }
+      .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon{
+        color: $lightGreen;
+      }
+      .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+        background-color: white;
+        color: $lightGreen;
+    }
+    }
+  }
+}

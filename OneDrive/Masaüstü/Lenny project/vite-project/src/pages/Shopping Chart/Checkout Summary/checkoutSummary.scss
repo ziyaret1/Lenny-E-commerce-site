@@ -1,0 +1,159 @@
+@import "../../../assets/styles/variables.scss";
+
+.checkoutSummary-container {
+  width: 36%;
+  border: 1px solid $borderGrey;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: -8%;
+  background-color: white;
+  .productSelected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .borderBottom {
+    border: 1px solid $borderGrey;
+  }
+  .prise-taxes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    p {
+      color: $iconGrey;
+    }
+    .totalPrise {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .shippingDiscount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .tax-fee {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .finalTotalPrise {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .usePromo-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid $borderGrey;
+    border-radius: 8px;
+    cursor: pointer;
+    .promoIcon-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .promoText {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          color: $iconGrey;
+        }
+      }
+    }
+    .promoRightArrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .checkout-button {
+    cursor: pointer;
+
+    height: 50px;
+    border: 1px solid $darkGreen;
+    background-color: $darkGreen;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .checkoutSummary-container {
+    width: 100%;
+    .checkoutSum-title {
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .prise-taxes {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      p {
+        font-size: 14px;
+        color: $iconGrey;
+      }
+      .totalPrise {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .shippingDiscount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .tax-fee {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .finalTotalPrise {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .usePromo-cont {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-radius: 8px;
+      .promoIcon-title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .promoText {
+          gap: 4px;
+          h4 {
+            font-size: 15px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .promoRightArrow {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .checkout-button {
+      font-size: 16px;
+    }
+  }
+}

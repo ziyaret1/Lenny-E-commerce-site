@@ -1,0 +1,13 @@
+
+.choices-summary {
+  padding: 2% 5%;
+  display: flex;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 450px){
+  .choices-summary {
+    display: flex;
+    flex-direction: column;
+  }
+}

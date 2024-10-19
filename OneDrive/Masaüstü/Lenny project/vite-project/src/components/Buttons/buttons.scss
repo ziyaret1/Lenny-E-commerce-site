@@ -1,0 +1,45 @@
+@import "../../assets/styles/variables.scss";
+
+.buttons {
+  .buttonStyle {
+    width: 200px;
+    height: 53px;
+    border-radius: 8px;
+    border: 1px solid $darkGreen;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    .buttonIcon {
+      width: 30px;
+      height: 30px;
+      color: red;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .buttons {
+    .buttonStyle {
+      width: 94px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid $darkGreen;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      gap: 10px;
+      .buttonIcon {
+        width: 30px;
+        height: 30px;
+        color: red;
+      }
+    }
+  }
+}

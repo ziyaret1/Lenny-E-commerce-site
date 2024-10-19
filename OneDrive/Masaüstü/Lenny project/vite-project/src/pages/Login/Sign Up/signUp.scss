@@ -1,0 +1,260 @@
+@import "../../../assets/styles/variables.scss";
+
+.signUp-container {
+  border: 1px solid $borderGrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 9px;
+  background-color: white;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  padding: 23px;
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+    .loading {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #fff;
+      border-top: 4px solid #1E4C2F;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .signUp-title {
+    h2 {
+      font-size: 25px;
+      color: $black;
+    }
+  }
+  .signUpInput {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .genderInput{
+      display: flex;
+      flex-direction: column;
+      border: none;
+      border-radius: 8px;
+      margin-top: 6px;
+      label{
+        display: flex;
+        align-items: center;
+        margin-bottom: -8px;
+        font-size: 16px;
+      }
+      input[type="radio"]{
+        margin-top: -5px;
+        margin-right: 8px;
+        cursor: pointer;
+        width: 16px;
+      }
+    }
+    .warningErrorRegister{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .errorIcon{
+        width: 30px;
+        height: 30px;
+      }
+      width: 390px;
+      color: #d0021b;
+      line-height: 15px;
+      padding: 14px 20px 14px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      border: 1px solid;
+      border-radius: 3px;
+      background-color: #fff4f6;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      .passwordInpt {
+        position: relative;
+      }
+      .toggle-password {
+        position: absolute;
+        top: 60%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        .passIcon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      label {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      input {
+        font-size: 14px;
+        width: 390px;
+        height: 46px;
+        border: none;
+        background-color: #f6f8fa;
+        border-radius: 8px;
+        padding: 10px 16px 10px 16px;
+        outline: none;
+      }
+    }
+
+    span {
+      color: $lightGreen;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 69%;
+      cursor: pointer;
+    }
+  }
+  .signUpButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .signUpbtn {
+      button {
+        cursor: pointer;
+        width: 390px;
+        height: 48px;
+        border: 1px solid $darkGreen;
+        background-color: $darkGreen;
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .methods {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .leftBorder {
+        width: 100px;
+        border-top: 1px solid $borderGrey;
+      }
+      span {
+        color: $iconGrey;
+        font-size: 16px;
+      }
+      .rightBorder {
+        width: 100px;
+        border-top: 1px solid $borderGrey;
+      }
+    }
+    .signfacebookbtn {
+      .facebookIcon {
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        color: #337fff;
+      }
+      button {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 390px;
+        height: 48px;
+        border: 1px solid $borderGrey;
+        background-color: transparent;
+        border-radius: 8px;
+        color: $black;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .signUp-container {
+    width: 330px;
+    gap: 30px;
+    padding: 20px;
+    .signUp-title {
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .signUpInput {
+      gap: 18px;
+      .warningErrorRegister{
+        .errorIcon{
+          width: 20px;
+          height: 20px;
+        }
+        width: 290px;
+        color: #d0021b;
+        line-height: 15px;
+        font-size: 13px;
+        padding: 6px 16px 6px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        border: 1px solid;
+        border-radius: 3px;
+        background-color: #fff4f6;
+      }
+      form {
+        gap: 13px;
+        input {
+          width: 290px;
+        }
+      }
+      span {
+        font-size: 14px;
+        margin-left: 59%;
+      }
+    }
+    .signUpButtons {
+      gap: 20px;
+      .signUpbtn {
+        button {
+          width: 290px;
+          font-size: 16px;
+        }
+      }
+      .methods {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .leftBorder {
+          width: 80px;
+        }
+        span {
+          font-size: 12px;
+        }
+        .rightBorder {
+          width: 80px;
+        }
+      }
+      .signfacebookbtn {
+        .facebookIcon {
+          margin-bottom: 3px;
+        }
+        button {
+          width: 290px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
